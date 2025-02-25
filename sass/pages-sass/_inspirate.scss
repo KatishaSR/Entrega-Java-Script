@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+body,
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f5f4f4;
+  font-size: 11px;
+  font-family: 'Arvo', monospace;
+  
+  @supports(display: grid) {
+    display: block;
+  }
+}
+
+.message {
+  border: 1px solid #d2d0d0;
+  padding: 2em;
+  font-size: 1.7vw;
+  box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+  
+  @supports(display: grid) {
+    display: none;
+  }
+}
+
+.section {
+  display: none;
+  padding: 2rem;
+  
+  @media screen and (min-width: 768px) {
+    padding: 4rem;
+  }
+  
+  @supports(display: grid) {
+    display: block;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 1.5em;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 150px;
+  grid-auto-flow: row dense;
+}
+
+.it {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  background: #0c9a9a;
+  color: #fff;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  color: #fff;
+  background:  url("https://services.meteored.com/img/article/por-que-el-mar-es-de-color-azul-1685269880797_1280.jpeg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: -2px 2px 10px 0px rgba(#444, 0.4);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  counter-increment: item-counter;
+  
+  &:nth-of-type(2n) {
+    background-image: url("https://content.elmueble.com/medio/2015/07/08/salon_veraniego_con_detalles_en_azul_1280x1156.jpg");
+  }
+  &:nth-of-type(3n) {
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/salon-azul-zocalo-1621422785.jpg?crop=1xw:1xh;center,top&resize=980:*");
+  }
+  
+  &:nth-of-type(4n) {
+    background-image: url("https://i.pinimg.com/originals/a8/e4/6f/a8e46f985529102c1c0110194428f69e.jpg")
+}
+  &:nth-of-type(5n) {
+    background-image: url("https://content.elmueble.com/medio/2021/06/07/00407813b_e30b0d2e_1883x2000.jpg");
+  }
+  
+  &:nth-of-type(6n) {
+    background-image: url("https://www.zubludiving.com/images/Mexico/Yucatan-Peninsula/Tulum-Akumal-Riviera-Maya/Tulum-Akumal-Riviera-Maya-Mexico-Diving-3.jpg");
+  }
+  &:nth-of-type(7n) {
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/redoute-dma302-ggs084-ghz731-ghz729-ghz730-01-1619103410.jpg");
+  }
+  &:nth-of-type(8n) {
+    background-image: url("https://content.elmueble.com/medio/2021/10/07/00481965-crea-un-rincon-exclusivo-de-plantas_88fed0ef_1335x2000.jpg");
+  }
+  &:nth-of-type(9n) {
+    background-image: url("https://vader-prod.s3.amazonaws.com/1723120140-salon-comedor-terracota-portavelas-el-corte-ingles-66b4b9e18ec34.jpg");
+  }
+  &:nth-of-type(10n) {
+    background-image: url("https://siamodesign.com/wp-content/uploads/2024/03/18-Terraza-scaled.webp");
+  }
+  &:nth-of-type(11n) {
+    background-image: url('https://www.kukyflor.com/blog/wp-content/uploads/2018/04/6820517-tulip-fields.jpg');
+  }
+  &:nth-of-type(12n) {
+    background-image: url('https://m.media-amazon.com/images/I/713FYFGXc-S._AC_UF894,1000_QL80_.jpg');
+  }
+  &:nth-of-type(13n) {
+    background-image: url('https://content.elmueble.com/medio/2023/07/24/distribuidor-en-color-lila_00000000_230724153534_1000x1450.jpg');
+  }
+  &:nth-of-type(14n) {
+    background-image: url("https://parkemueble.com/wp-content/uploads/2024/03/gingerbreads-march-8-bright-kitchen-with-flowers-1120x747.jpg");
+  }
+  &:nth-of-type(15n) {
+    background-image: url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/468287b2-f9b9-4a0f-8283-53ec0d112c3f.47d24b01fd79acb783a4b557ef2c4f90.jpeg');
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+    
+    &:after {
+      opacity: 0;
+    }
+  }
+
+  &--medium {
+    grid-row-end: span 2;
+  }
+
+  &--large {
+    grid-row-end: span 3;
+  }
+
+  &--full {
+    grid-column-end: auto;
+
+    @media screen and (min-width: 768px) {
+      grid-column: 1/-1;
+      grid-row-end: span 2;
+    }
+  }
+  
+  &__details {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    color: #444;
+    background: #fff;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    color: #828282;
+    
+    &:before {
+      content: counter(item-counter);
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding-right: 0.5em;
+      color: #444;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+
+*{padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+ul{display: inline-block;
+
+}
+li {list-style: none;
+    display: inline-block;
+    text-decoration-line:inherit;
+
+}
+li {list-style: none;
+    display: inline-block;
+    text-decoration-line:inherit;
+}
+/*ESTILOS MAIN*/
+#main {max: width 1000px; 
+    height:1000px;
+    margin: 0 auto;
+    padding-top: 12px;
+    text-align:center;
+
+} 
+
+.navbar 
+
+{ background:rgb(142, 185, 178)!important;
+
+        
+     
+}
+
+.container-fluid{
+
+    color:rgb(16, 113, 113)!important;
+    font-weight: bold;
+    padding-left: 33%;
+}
+
+.navbar{
+    width: 100%;
+    text-align: center;
+    position:relative;
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');  
+
+    padding: 100;
+    margin: 100;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif
+}
+
+body {
+    background-color: bisque
+}
+
+.container {
+    margin: 30px auto
+}

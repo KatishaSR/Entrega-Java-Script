@@ -1,0 +1,54 @@
+/*ESTILOS HEADER */
+
+#header {width: 100%;
+    height: 100%;
+background-color: rgb(255, 255, 255);
+background-size: cover; 
+text-align: center;
+position:static;
+}
+#nav {text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+   
+}
+.navLogo { width: 2px;
+    
+
+}
+.icon-home {
+    background-size: 2px;
+    width: 35px;
+    height: 35px;
+  }
+#nav ul {margin: 0 auto;
+    position:relative;
+}
+/*---------------- INICIA MENU NAV egador---------------- */ 
+.navbar-nav .nav-link {
+    color: #000 !important;
+    padding: 2% 0rem !important;
+    border-color: transparent;
+    
+    margin-inline-start: 2rem;
+    transition: none
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow:inset
+}
+
+.navbar-nav .nav-link.active,
+.border-red {
+    border-bottom: 4px solid #1cb798
+}
+
+.navbar-nav .nav-link:hover {
+    border-bottom: 3px solid #b7a81c
+}
+
+
+
+
+ /*---------------- TERMINA  MENU NAV egador---------------- */  

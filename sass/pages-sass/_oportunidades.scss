@@ -1,0 +1,368 @@
+/*-------------EMPIEZAN FLIPPING CARDS DE OPORTUNIDADES------*/
+
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 48.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+.grids {
+  max-width: 136rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+}
+
+.card-one {
+  grid-column: 1/4;
+}
+
+.card-two {
+  grid-column: 1/4;
+}
+
+.card-three {
+  grid-column: 1/4;
+}
+
+.card-four {
+  grid-column: 1/4;
+}
+
+.card-five {
+  grid-column: 1/4;
+}
+
+.card-six {
+  grid-column: 1/4;
+}
+
+.card-seven {
+  grid-column: 1/4;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 25rem;
+  width: 100%;
+  transition: all ease-in-out 400ms;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: translateY(-1px);
+}
+
+.card__side {
+  transition: all 0.8s ease;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25rem;
+  width: 100%;
+  backface-visibility: hidden;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.card__side--front {
+  background-color: #2196f3;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card__side--back {
+  background-color: #303f9f;
+  transform: rotateY(180deg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.showGreen {
+  transform: rotateY(-180deg);
+}
+
+.showRed {
+  transform: rotateY(0);
+}
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.text-box-top {
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 10px #0000006c;
+  font-weight: 400;
+}
+
+.text-box-middle {
+  font-size: 5.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px #0000006c;
+}
+
+.text-box-lower {
+  font-size: 2rem;
+  text-shadow: 2px 2px 10px #0000006c;
+  font-weight: 400;
+}
+
+.heading {
+  transition: all 0.6s linear;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#front-1 {
+  background-image: linear-gradient(
+      rgba(175, 125, 142, 0.6),
+      rgba(206, 175, 175, 0.6) 
+    ), url("https://m.media-amazon.com/images/I/61ECPpsOTcS._AC_UF894,1000_QL80_.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#front-2 {
+  background-image: linear-gradient(
+      rgba(130, 214, 240, 0.767),
+      rgba(54, 176, 246, 0.9)
+    ),
+    url("https://media.admagazine.com/photos/6532c06f1b48004d16e76124/4:3/w_2664,h_1998,c_limit/cortinas-en-casa.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#front-3 {
+  background-image: linear-gradient(
+      rgba(109, 110, 161, 0.9),
+      rgba(178, 178, 220, 0.9)
+    ),
+    url("https://m.media-amazon.com/images/I/81F1+x30vxL._AC_SL1200_.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#front-4 {
+  background-image: linear-gradient(
+      rgba(74, 190, 122, 0.767),
+      rgba(6, 66, 48, 0.9)
+    ),
+    url("https://m.media-amazon.com/images/I/81WUBTGGhLL._AC_UF894,1000_QL80_.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#front-5 {
+  background-image: linear-gradient(
+    rgba(230, 226, 207, 0.767),
+    rgba(238, 210, 100, 0.9)
+    ),
+    url("https://m.media-amazon.com/images/I/719YQnirf-L.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#front-6 {
+  background-image: linear-gradient(
+      rgba(214, 21, 86, 0.801),
+      rgba(20, 20, 20, 0.6)
+    ),
+    url("https://m.media-amazon.com/images/I/61jKW0KJP-L.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#front-7 {
+  background-image: linear-gradient(
+      rgba(31, 136, 168, 0.767),
+      rgba(14, 46, 65, 0.9)
+    ),
+    url("https://www.decoora.com/wp-content/uploads/2019/11/lampara-pie-salon-tripode.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Back */
+
+#back-1 {
+  background-image: linear-gradient(
+      rgba(248, 148, 181, 0.6),
+      rgba(241, 212, 212, 0.6)
+    ),
+    url("https://m.media-amazon.com/images/I/61ECPpsOTcS._AC_UF894,1000_QL80_.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#back-2 {
+  background-image: linear-gradient(
+      rgba(31, 136, 168, 0.767),
+      rgba(14, 46, 65, 0.9)
+    ),
+    url("https://media.admagazine.com/photos/6532c06f1b48004d16e76124/4:3/w_2664,h_1998,c_limit/cortinas-en-casa.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#back-3 {
+  background-image: linear-gradient(
+      rgba(148, 148, 235, 0.9),
+      rgba(192, 192, 226, 0.9)
+    ),
+    url("https://m.media-amazon.com/images/I/81F1+x30vxL._AC_SL1200_.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#back-4 {
+  background-image: linear-gradient(
+      rgba(74, 190, 122, 0.767),
+      rgba(6, 66, 48, 0.9)
+    ),
+    url("https://m.media-amazon.com/images/I/81WUBTGGhLL._AC_UF894,1000_QL80_.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#back-5 {
+  background-image: linear-gradient(
+      rgba(230, 226, 207, 0.767),
+      rgba(238, 210, 100, 0.9)
+    ),
+    url("https://m.media-amazon.com/images/I/719YQnirf-L.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#back-6 {
+  background-image: linear-gradient(
+      rgba(214, 21, 86, 0.801),
+      rgba(20, 20, 20, 0.6)
+    ),
+    url("https://content.revistainteriores.es/medio/2023/12/12/velas-aromaticas-artesanales_12a5b249_231212162955_1280x794.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#back-7 {
+  background-image: linear-gradient(
+      rgba(31, 136, 168, 0.767),
+      rgba(14, 46, 65, 0.9)
+    ),
+    url("https://www.decoora.com/wp-content/uploads/2019/11/lampara-pie-salon-tripode.jpg");
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .grids {
+    max-width: 136rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+  }
+
+  .card-one {
+    grid-column: 1/3;
+  }
+
+  .card-two {
+    grid-column: 3/4;
+  }
+
+  .card-three {
+    grid-column: 1/2;
+  }
+
+  .card-four {
+    grid-column: 2/2;
+  }
+
+  .card-five {
+    grid-column: 3/4;
+  }
+
+  .card-six {
+    grid-column: 1/2;
+  }
+
+  .card-seven {
+    grid-column: 2/4;
+  }
+}
+
+
+/*-------------TERMINAN FLIPPING CARDS DE OPORTUNIDADES------*/

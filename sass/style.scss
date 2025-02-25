@@ -1,0 +1,14 @@
+@use "sass:meta";
+@use "presets-sass/_body";
+@use "presets-sass/_footer";
+@use"presets-sass/_header";
+@use "presets-sass/main";
+
+
+/*PAGES*/
+@use "pages-sass/_index";
+@use"pages-sass/_colecciones";
+@use"pages-sass/_accesorios";
+@use "pages-sass/_oportunidades";
+@use"pages-sass/_inspirate";
+
